@@ -14,7 +14,10 @@
         value="{{ $showPostById->title }}" disabled>
         <input type="text" name="body" placeholder="Body"
         value="{{ $showPostById->body }}" disabled>
-        <button type="submit">Submit</button>
+        <button> <a href="/post">
+          Back
+    </a>
+</button>
     </form>
 </body>
 </html>

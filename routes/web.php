@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProfileController;
 
 
 /*
@@ -20,3 +21,10 @@ Route::get('/', function () {
 });
 
 Route::resource('post', PostController::class);
+Route::resource('profile', ProfileController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('profile', ProfileController::class)->middleware('auth');
+Route::resource('post', PostController::class)->middleware('auth');

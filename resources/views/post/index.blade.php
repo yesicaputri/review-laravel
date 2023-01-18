@@ -8,7 +8,10 @@
 </head>
 <body>
    <h1>Halaman Index Post</h1>
-   
+   <button> <a href="/post/create">
+          Post Create
+    </a>
+</button>
    <table>
     <thead>
         <tr>
